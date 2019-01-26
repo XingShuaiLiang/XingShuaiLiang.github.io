@@ -59,6 +59,7 @@
 		else 
 		{
 			backToTop.classList.remove('back-to-top-show')
+			document.getElementById("top").style.visibility = "visible";
 			document.getElementById("top").style.background = "rgba(255, 255, 255, 0)";
 		}
 	})
