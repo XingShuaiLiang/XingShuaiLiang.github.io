@@ -37,7 +37,7 @@
 	// console.log(backToTop);
 	window.addEventListener('scroll', function() {
 		//判断浏览器页面上下滚动来确定导航栏是否显示
-		d = document.documentElement.scrollTop;
+		d = Math.max(document.documentElement.scrollTop, document.body.scrollTop)
 		if (t > d)
 		{
 			//如果t大于p就是往上滚动，反之
