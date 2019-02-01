@@ -8,7 +8,10 @@
     *zoom: 1;
 }
 .page {
-    width: 1140px;
+    #width: 1140px;
+	padding-left: 5%;
+    padding-right: 5%;
+	background-color:#ffffff;
     box-sizing: border-box;
     margin: 0 auto;
     // word-break: break-all;
@@ -142,14 +145,8 @@
         }
     }
 }
-@media screen and (max-width:1200px) and (min-width: 770px) {
-    .page {
-        width: 90%;
-    }
-}
 @media screen and (max-width: 770px) {
     .page {
-        width: 95%;
         .left {
             width: 100%;
             float: left;
