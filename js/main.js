@@ -74,3 +74,10 @@
 (function() {
   var demoItems = document.querySelectorAll('.grid-item')
 }());
+//////////////////////////TopImage//////////////////////////////
+(function() {
+  var VisibleHeight = document.documentElement.clientHeight;
+  VisibleHeight -= 60;
+  document.getElementById("TopImage").style.height = VisibleHeight + "px";
+  var b =  document.getElementsByClassName("TopImage").style;
+}());
