@@ -72,12 +72,28 @@
 
 //////////////////////////hover on demo//////////////////////////////
 (function() {
-  var demoItems = document.querySelectorAll('.grid-item')
+	var demoItems = document.querySelectorAll('.grid-item')
 }());
 //////////////////////////TopImage//////////////////////////////
 (function() {
-  var VisibleHeight = document.documentElement.clientHeight;
-  VisibleHeight -= 60;
-  document.getElementById("TopImage").style.height = VisibleHeight + "px";
-  var b =  document.getElementsByClassName("TopImage").style;
+	//初始化时根据网页可显示大小来决定占位div的高度
+	var VisibleHeight = document.documentElement.clientHeight;
+	var TargetHeight = VisibleHeight - 60;
+	var TopImageDocu = document.getElementById("TopImage");
+	TopImageDocu.style.height = TargetHeight + "px"
+	//窗口改变大小事件，动态改变占位div的高度
+	window.onresize = function(){ 
+		VisibleHeight = document.documentElement.clientHeight;
+		VisibleHeight -= 60;
+		TargetHeight = Math.round(window.outerWidth / 1.7777777777778);//当前浏览器宽度/(16:9)的倍率得到占位div应有高度
+		if (TargetHeight <= VisibleHeight)//如果计算出来的占位高度不大于当前可视高度-60的话才使其生效
+		{
+			TopImageDocu.style.height = TargetHeight + "px"
+		}
+		if (TargetHeight > VisibleHeight)
+		{
+			TargetHeight = VisibleHeight;
+			TopImageDocu.style.height = TargetHeight + "px"
+		}
+	}
 }());
