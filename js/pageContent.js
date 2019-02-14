@@ -5,7 +5,7 @@
  * 滚轮滚到一定位置时，将 sidebar-wrap 添加 fixed 样式
  * 反之，取消样式
  */
-//(function() {
+(function() {
 //    if (window.innerWidth > 770) {
 //
 //        var sidebarWrap = document.querySelector('.right>.wrap')
@@ -36,8 +36,8 @@
 //        }
 //        setContentMaxHeightInPC() //设置目录最大高度(PC端)
 //    }
-//    moveTOC() //将Content内容转移
-//}());
+    moveTOC() //将Content内容转移
+}());
 
 /**
  * 设置目录最大高度
